@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 
-/* eslint-disable semi */
-const mkdirp = require('mkdirp');
 const { get } = require('https');
-const { readFile, writeFile } = require('fs');
+const { readFile, mkdirSync, writeFile } = require('fs');
 
 /**
  * Will lookup the argument in the cli arguments list and will return a
@@ -79,17 +77,16 @@ const writeBadgeInFolder = (key, res) => {
 const getBadgeByKey = report => (key) => {
   const url = getBadge(report, key);
 
-  download(url, (err, res) => {
+  download(url, async (err, res) => {
     if (err) {
       throw err;
     }
-    mkdirp(outputPath, (folderError) => {
-      if (folderError) {
-        console.error(`Could not create output directory ${folderError}`);
-      } else {
-        writeBadgeInFolder(key, res);
-      }
-    })
+
+    // create a required folder structure, passed in "output" in order to save the badge there
+    mkdirSync(outputPath, { recursive: true });
+
+    // write the badge file to folder just created by mkdirp
+    writeBadgeInFolder(key, res);
   })
 }
 

@@ -1,6 +1,15 @@
 # Jest Coverage Badges
 
-> Create a group of coverage badge
+A fork of [pamepeixinho/jest-coverage-badges](https://github.com/pamepeixinho/jest-coverage-badges),
+that has been out of maintenance since 2018.
+
+The corresponding npm package is published as @alloy-ch/jest-coverage-badges to GitHub Packages.
+
+To install:
+```bash
+npm install --save-dev @alloy-ch/jest-coverage-badges
+```
+-----
 
 [![License][license-image]][license-url]
 [![npm](https://img.shields.io/npm/dw/jest-coverage-badges.svg)](https://www.npmjs.com/package/jest-coverage-badges)
