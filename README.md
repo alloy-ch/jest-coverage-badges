@@ -1,5 +1,7 @@
 # Jest Coverage Badges
 
+Current version: **v1.1.3**
+
 A fork of [pamepeixinho/jest-coverage-badges](https://github.com/pamepeixinho/jest-coverage-badges),
 that has been out of maintenance since 2018.
 
