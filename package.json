@@ -18,7 +18,7 @@
   ],
   "author": "Pamela Peixinho <git@pamepeixinho.com> (https://pamepeixinho.github.io)",
   "engines": {
-    "node": ">=20",
+    "node": ">=22",
     "npm": ">=10"
   },
   "bugs": {
@@ -31,8 +31,8 @@
     "prepush": "npm run lint && npm run test"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.12",
-    "eslint": "^9.4.0",
+    "@types/jest": "^29.5.14",
+    "eslint": "^9.14.0",
     "jest": "^29.7.0"
   },
   "files": [
